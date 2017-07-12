@@ -27,11 +27,15 @@
 #
 
 # Delphi compiler-generated binaries (safe to delete)
+bin\
 *.exe
 *.dll
 *.bpl
 *.bpi
 *.dcp
+*.dof
+*.dproj.2007
+*.mes
 *.so
 *.apk
 *.drc

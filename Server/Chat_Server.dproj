@@ -1,0 +1,166 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{2b3f0f78-f854-4da8-90ff-014ffbf94076}</ProjectGuid>
+			<MainSource>Chat_Server.dpr</MainSource>
+			<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+			<DCC_DCCCompiler>DCC32</DCC_DCCCompiler>
+			<DCC_DependencyCheckOutputName>..\Chat_Server.exe</DCC_DependencyCheckOutputName>
+			<ProjectVersion>12.3</ProjectVersion>
+			<Base>True</Base>
+			<Config Condition="'$(Config)'==''">Debug</Config>
+			<Platform>Win32</Platform>
+			<AppType>Application</AppType>
+			<FrameworkType>VCL</FrameworkType>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_1)'!=''">
+			<Cfg_1>true</Cfg_1>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_2)'!=''">
+			<Cfg_2>true</Cfg_2>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!=''">
+			<DCC_UnitAlias>WinTypes=Windows;WinProcs=Windows;DbiTypes=BDE;DbiProcs=BDE;DbiErrs=BDE;$(DCC_UnitAlias)</DCC_UnitAlias>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_1)'!=''">
+			<Version>7.0</Version>
+			<DCC_DebugInformation>False</DCC_DebugInformation>
+			<DCC_LocalDebugSymbols>False</DCC_LocalDebugSymbols>
+			<DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+			<DCC_ExeOutput>..\</DCC_ExeOutput>
+			<DCC_DcuOutput>c:\temp\lixo_delphi\</DCC_DcuOutput>
+			<DCC_ObjOutput>c:\temp\lixo_delphi\</DCC_ObjOutput>
+			<DCC_HppOutput>c:\temp\lixo_delphi\</DCC_HppOutput>
+			<DCC_UnitSearchPath>d:\delphi\units\;d:\delphi\tools\;..\;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
+			<DCC_ResourcePath>d:\delphi\units\;d:\delphi\tools\;..\;$(DCC_ResourcePath)</DCC_ResourcePath>
+			<DCC_ObjPath>d:\delphi\units\;d:\delphi\tools\;..\;$(DCC_ObjPath)</DCC_ObjPath>
+			<DCC_IncludePath>d:\delphi\units\;d:\delphi\tools\;..\;$(DCC_IncludePath)</DCC_IncludePath>
+			<DCC_Define>RELEASE;$(DCC_Define)</DCC_Define>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_2)'!=''">
+			<DCC_MapFile>3</DCC_MapFile>
+			<Version>7.0</Version>
+			<DCC_ExeOutput>..\Bin</DCC_ExeOutput>
+			<DCC_DcuOutput>$(temp)</DCC_DcuOutput>
+			<DCC_ObjOutput>c:\temp\lixo_delphi\</DCC_ObjOutput>
+			<DCC_HppOutput>c:\temp\lixo_delphi\</DCC_HppOutput>
+			<DCC_ResourcePath>d:\delphi\units\;d:\delphi\tools\;..\;$(DCC_ResourcePath)</DCC_ResourcePath>
+			<DCC_ObjPath>d:\delphi\units\;d:\delphi\tools\;..\;$(DCC_ObjPath)</DCC_ObjPath>
+			<DCC_IncludePath>d:\delphi\units\;d:\delphi\tools\;..\;$(DCC_IncludePath)</DCC_IncludePath>
+			<DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
+		</PropertyGroup>
+		<ProjectExtensions>
+			<Borland.Personality>Delphi.Personality.12</Borland.Personality>
+			<Borland.ProjectType>VCLApplication</Borland.ProjectType>
+			<BorlandProject>
+				<Delphi.Personality>
+					<Parameters/>
+					<VersionInfo>
+						<VersionInfo Name="IncludeVerInfo">True</VersionInfo>
+						<VersionInfo Name="AutoIncBuild">False</VersionInfo>
+						<VersionInfo Name="MajorVer">1</VersionInfo>
+						<VersionInfo Name="MinorVer">0</VersionInfo>
+						<VersionInfo Name="Release">0</VersionInfo>
+						<VersionInfo Name="Build">0</VersionInfo>
+						<VersionInfo Name="Debug">False</VersionInfo>
+						<VersionInfo Name="PreRelease">False</VersionInfo>
+						<VersionInfo Name="Special">False</VersionInfo>
+						<VersionInfo Name="Private">False</VersionInfo>
+						<VersionInfo Name="DLL">False</VersionInfo>
+						<VersionInfo Name="Locale">1046</VersionInfo>
+						<VersionInfo Name="CodePage">1252</VersionInfo>
+					</VersionInfo>
+					<VersionInfoKeys>
+						<VersionInfoKeys Name="FileVersion">1.0.0.0</VersionInfoKeys>
+						<VersionInfoKeys Name="ProductVersion">1.0.0.0</VersionInfoKeys>
+						<VersionInfoKeys Name="CompanyName"/>
+						<VersionInfoKeys Name="FileDescription">Servidor de Chat utilizando componentes Indy</VersionInfoKeys>
+						<VersionInfoKeys Name="InternalName">Chat_Server</VersionInfoKeys>
+						<VersionInfoKeys Name="LegalCopyright"/>
+						<VersionInfoKeys Name="LegalTrademarks"/>
+						<VersionInfoKeys Name="OriginalFilename"/>
+						<VersionInfoKeys Name="ProductName">Indy Chat Server</VersionInfoKeys>
+					</VersionInfoKeys>
+					<Excluded_Packages>
+						<Excluded_Packages Name="C:\Arquivos de programas\Borland\BDS\3.0\Quick Report Pro 4.05\bpl\QR4DesignDX.bpl">QuickReport4 Components</Excluded_Packages>
+						<Excluded_Packages Name="C:\Arquivos de programas\Borland\BDS\3.0\Bin\dclbde90.bpl">Borland BDE DB Components</Excluded_Packages>
+						<Excluded_Packages Name="C:\Documents and Settings\Manoel\Meus documentos\Borland Studio Projects\Bpl\ZCore.bpl">Zeos Core Classes and Intefaces</Excluded_Packages>
+						<Excluded_Packages Name="C:\Documents and Settings\Manoel\Meus documentos\Borland Studio Projects\Bpl\ZParseSql.bpl">Zeos SQL Parsing Classes and Intefaces</Excluded_Packages>
+						<Excluded_Packages Name="C:\Documents and Settings\Manoel\Meus documentos\Borland Studio Projects\Bpl\ZPlain.bpl">Zeos Plain Database API</Excluded_Packages>
+						<Excluded_Packages Name="C:\Documents and Settings\Manoel\Meus documentos\Borland Studio Projects\Bpl\ZDbc.bpl">Zeos Low Level Database API</Excluded_Packages>
+						<Excluded_Packages Name="c:\arquivos de programas\borland\bds\3.0\Bin\dclIntraweb_72_90.bpl">Intraweb 7.2 Design Package for Delphi Win32</Excluded_Packages>
+						<Excluded_Packages Name="c:\arquivos de programas\borland\bds\3.0\Bin\dclofficexp90.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
+						<Excluded_Packages Name="C:\Documents and Settings\Manoel\Meus documentos\Borland Studio Projects\Bpl\ECC D2005.bpl">Componentes de Impresso com QuickReport ou Form Comun</Excluded_Packages>
+						<Excluded_Packages Name="c:\arquivos de programas\borland\bds\3.0\Bin\dbwebxprt.bpl">Borland Web Wizard Package</Excluded_Packages>
+						<Excluded_Packages Name="c:\arquivos de programas\borland\bds\3.0\Bin\dcltee90.bpl">TeeChart Components</Excluded_Packages>
+						<Excluded_Packages Name="c:\arquivos de programas\borland\bds\3.0\RaveReports\Lib\dclRave.bpl">Rave Reports 6.0 BE Package</Excluded_Packages>
+						<Excluded_Packages Name="c:\arquivos de programas\borland\bds\3.0\Componentes\RBuilder\Lib\dclDAD99.bpl">ReportBuilder Data Access Environment</Excluded_Packages>
+						<Excluded_Packages Name="c:\arquivos de programas\borland\bds\3.0\Componentes\RBuilder\Lib\dclRBU99.bpl">ReportBuilder Sample Components</Excluded_Packages>
+						<Excluded_Packages Name="c:\arquivos de programas\borland\bds\3.0\Componentes\RBuilder\Lib\dclRBADO99.bpl">ReportBuilder Data Access for ADO</Excluded_Packages>
+						<Excluded_Packages Name="c:\arquivos de programas\borland\bds\3.0\Componentes\RBuilder\Lib\dclRBDBE99.bpl">ReportBuilder Data Access for dbExpress</Excluded_Packages>
+						<Excluded_Packages Name="C:\Arquivos de programas\Borland\BDS\3.0\Componentes\RBuilder\Lib\dclRBE99.bpl">ReportBuilder Enterprise</Excluded_Packages>
+						<Excluded_Packages Name="C:\Arquivos de programas\Borland\BDS\3.0\Componentes\RBuilder\Lib\dclRAP99.bpl">ReportBuilder RAP Language</Excluded_Packages>
+						<Excluded_Packages Name="C:\Arquivos de programas\Borland\BDS\3.0\bin\ztv05dt.bpl">ZipTV Compression Components - Designtime Package</Excluded_Packages>
+						<Excluded_Packages Name="C:\Documents and Settings\Manoel\Meus documentos\Borland Studio Projects\Bpl\ZComponent.bpl">Zeos Database Components</Excluded_Packages>
+						<Excluded_Packages Name="C:\Arquivos de programas\Borland\BDS\3.0\Componentes\RBuilder\Lib\dclRBC99.bpl">ReportBuilder TeeChart 4.04 Components</Excluded_Packages>
+						<Excluded_Packages Name="C:\Documents and Settings\Manoel\Meus documentos\Borland Studio Projects\Bpl\JvAppFrmD9D.bpl">JVCL Application and Form Components</Excluded_Packages>
+						<Excluded_Packages Name="C:\Documents and Settings\Manoel\Meus documentos\Borland Studio Projects\Bpl\JvCmpD9D.bpl">JVCL Non-Visual Components</Excluded_Packages>
+						<Excluded_Packages Name="C:\Documents and Settings\Manoel\Meus documentos\Borland Studio Projects\Bpl\JvCryptD9D.bpl">JVCL Encryption and Compression Components</Excluded_Packages>
+						<Excluded_Packages Name="C:\Documents and Settings\Manoel\Meus documentos\Borland Studio Projects\Bpl\JvCustomD9D.bpl">JVCL Custom Controls</Excluded_Packages>
+						<Excluded_Packages Name="C:\Documents and Settings\Manoel\Meus documentos\Borland Studio Projects\Bpl\JvDockingD9D.bpl">JVCL Docking Components</Excluded_Packages>
+						<Excluded_Packages Name="C:\Documents and Settings\Manoel\Meus documentos\Borland Studio Projects\Bpl\JvEDID9D.bpl">JVCL EDI Components Designtime Package</Excluded_Packages>
+						<Excluded_Packages Name="C:\Documents and Settings\Manoel\Meus documentos\Borland Studio Projects\Bpl\JvGlobusD9D.bpl">JVCL Globus Components</Excluded_Packages>
+						<Excluded_Packages Name="C:\Documents and Settings\Manoel\Meus documentos\Borland Studio Projects\Bpl\JvInspectorD9D.bpl">JVCL Inspector Components</Excluded_Packages>
+						<Excluded_Packages Name="C:\Documents and Settings\Manoel\Meus documentos\Borland Studio Projects\Bpl\JvInterpreterD9D.bpl">JVCL Interpreter Components</Excluded_Packages>
+						<Excluded_Packages Name="C:\Documents and Settings\Manoel\Meus documentos\Borland Studio Projects\Bpl\JvJansD9D.bpl">JVCL Jans Components</Excluded_Packages>
+						<Excluded_Packages Name="C:\Documents and Settings\Manoel\Meus documentos\Borland Studio Projects\Bpl\JvManagedThreadsD9D.bpl">JVCL Managed Threads</Excluded_Packages>
+						<Excluded_Packages Name="C:\Documents and Settings\Manoel\Meus documentos\Borland Studio Projects\Bpl\JvNetD9D.bpl">JVCL Network Components</Excluded_Packages>
+						<Excluded_Packages Name="C:\Documents and Settings\Manoel\Meus documentos\Borland Studio Projects\Bpl\JvPluginD9D.bpl">JVCL Plugin Components</Excluded_Packages>
+						<Excluded_Packages Name="C:\Documents and Settings\Manoel\Meus documentos\Borland Studio Projects\Bpl\JvPrintPreviewD9D.bpl">JVCL Print Preview Components</Excluded_Packages>
+						<Excluded_Packages Name="C:\Documents and Settings\Manoel\Meus documentos\Borland Studio Projects\Bpl\JvSystemD9D.bpl">JVCL System Components</Excluded_Packages>
+						<Excluded_Packages Name="C:\Documents and Settings\Manoel\Meus documentos\Borland Studio Projects\Bpl\JvTimeFrameworkD9D.bpl">JVCL Time Framework</Excluded_Packages>
+						<Excluded_Packages Name="C:\DOCUME~1\Manoel\MEUSDO~1\BORLAN~1\Bpl\ProjectAnalyzerD90.bpl">JCL Project Analyzer for Delphi 2005</Excluded_Packages>
+						<Excluded_Packages Name="C:\Documents and Settings\Manoel\Meus documentos\Borland Studio Projects\Bpl\JvDotNetCtrlsD9D.bpl">JVCL DotNet Controls</Excluded_Packages>
+						<Excluded_Packages Name="c:\arquivos de programas\borland\bds\3.0\Bin\dclib90.bpl">Borland InterBase Express Components</Excluded_Packages>
+						<Excluded_Packages Name="c:\arquivos de programas\borland\bds\3.0\Bin\ibevnt90.bpl">Borland Interbase Event Alerter Component</Excluded_Packages>
+						<Excluded_Packages Name="C:\Documents and Settings\Manoel\Meus documentos\Borland Studio Projects\Bpl\JvUIBD2005Win32D.bpl">(untitled)</Excluded_Packages>
+					</Excluded_Packages>
+					<Source>
+						<Source Name="MainSource">Chat_Server.dpr</Source>
+					</Source>
+				</Delphi.Personality>
+				<Platforms>
+					<Platform value="Win32">True</Platform>
+				</Platforms>
+			</BorlandProject>
+			<ProjectFileVersion>12</ProjectFileVersion>
+		</ProjectExtensions>
+		<ItemGroup>
+			<DelphiCompile Include="Chat_Server.dpr">
+				<MainSource>MainSource</MainSource>
+			</DelphiCompile>
+			<DCCReference Include="UServer.pas">
+				<Form>FrmServer</Form>
+			</DCCReference>
+			<DCCReference Include="..\Chat_Tools.pas"/>
+			<BuildConfiguration Include="Debug">
+				<Key>Cfg_2</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Base">
+				<Key>Base</Key>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Release">
+				<Key>Cfg_1</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+		</ItemGroup>
+		<Import Condition="Exists('$(BDS)\Bin\CodeGear.Delphi.Targets')" Project="$(BDS)\Bin\CodeGear.Delphi.Targets"/>
+		<Import Condition="Exists('$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj')" Project="$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj"/>
+	</Project>
